@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	const navMenu = document.querySelector('.nav-menu');
 	const mainElement = document.getElementById('main');
 
-	mobileNav.addEventListener('click', () => {
+	mobileNav?.addEventListener('click', () => {
 		mobileNav.classList.toggle('active');
 		navMenu.classList.toggle('active');
 		mainElement.classList.toggle('blur');
 		document.body.classList.toggle('mobile-nav-open');
 	});
 
-	document.querySelectorAll('.nav-link').forEach((link) =>
+	document?.querySelectorAll('.nav-link').forEach((link) =>
 		link.addEventListener('click', () => {
 			mobileNav.classList.remove('active');
 			navMenu.classList.remove('active');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const bioExtended = document.querySelector('.bio-extended');
 	const showBtn = document.querySelector('.show-btn');
 
-	showBtn.addEventListener('click', () => {
+	showBtn?.addEventListener('click', () => {
 		bioExtended.classList.toggle('hide');
 		if (!bioExtended.classList.contains('hide')) {
 			showBtn.innerHTML =
